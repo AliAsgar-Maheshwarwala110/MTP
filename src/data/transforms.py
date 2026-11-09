@@ -127,3 +127,44 @@ class Normalize:
         
         sample["img"] = img
         return sample
+
+
+class GlobalNormalize:
+    """Normalize every channel with statistics computed from the training split."""
+
+    def __init__(self, stats_json: str, clip: float = 5.0):
+        self.stats_json = stats_json
+        self.clip = float(clip)
+        self._mean = None
+        self._std = None
+        self._load_stats()
+
+    def _load_stats(self):
+        try:
+            with open(self.stats_json) as f:
+                stats = json.load(f)
+        except FileNotFoundError:
+            return
+        self._mean = torch.tensor(stats["mean"], dtype=torch.float32).view(1, -1, 1, 1)
+        self._std = torch.tensor(stats["std"], dtype=torch.float32).view(1, -1, 1, 1)
+
+    def set_stats(self, mean, std):
+        self._mean = torch.as_tensor(mean, dtype=torch.float32).view(1, -1, 1, 1)
+        self._std = torch.as_tensor(std, dtype=torch.float32).view(1, -1, 1, 1)
+
+    def __call__(self, sample: dict) -> dict:
+        if self._mean is None or self._std is None:
+            self._load_stats()
+        if self._mean is None or self._std is None:
+            raise RuntimeError(
+                f"Global normalization statistics are unavailable: {self.stats_json}"
+            )
+        img = sample["img"].float()
+        if img.shape[1] != self._mean.shape[1]:
+            raise ValueError(
+                f"Expected {self._mean.shape[1]} channels, got {img.shape[1]}"
+            )
+        img = torch.nan_to_num(img, nan=0.0, posinf=0.0, neginf=0.0)
+        img = (img - self._mean) / (self._std + 1e-6)
+        sample["img"] = torch.clamp(img, -self.clip, self.clip)
+        return sample

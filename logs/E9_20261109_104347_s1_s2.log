@@ -1,0 +1,9 @@
+Seed set to 42
+2026-11-09 16:13:57 INFO Using NVIDIA GeForce GTX 1080 Ti (cuda)
+2026-11-09 16:16:20 INFO Model parameters: 2,146,497; aligned samples: {'train': 4191, 'val': 1047, 'test': 1311}; weather features: 27
+2026-11-09 16:16:20 INFO Training labels: 1740 positive / 2451 negative
+2026-11-09 16:20:32 INFO epoch 1/15 batch 50/131 elapsed 4.2 min ETA 6.8 min
+2026-11-09 16:25:14 INFO epoch 1/15 batch 100/131 elapsed 8.9 min ETA 2.8 min
+2026-11-09 16:31:39 INFO epoch 1/15 train loss 0.5033 F1 0.7118 AUC 0.8301; val loss 0.8644 F1 0.0227 AUC 0.7458; epoch 15.3 min; training elapsed 15.3 min ETA 214.3 min
+2026-11-09 16:31:40 INFO Saved new best checkpoint: /users/home/b23241/Sen12Landslides/outputs/lightweight/E9_ablation_20261109_104347/s1_s2/best_checkpoint.pt
+2026-11-09 16:35:51 INFO epoch 2/15 batch 50/131 elapsed 4.2 min ETA 6.8 min

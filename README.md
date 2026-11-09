@@ -32,6 +32,58 @@ for sensor in s1asc s1dsc s2; do
 done
 ```
 
+## E7 global-normalization training
+
+The default training configuration now reproduces the E7 normalization protocol from
+the companion experiments: per-channel mean and standard deviation are computed from
+the training split only, non-finite values are replaced with zero, and standardized
+values are clipped to `[-5, 5]`. The same cached statistics are then used for
+validation and test data, preventing split leakage.
+
+Each run writes its artifacts to the Hydra run directory:
+
+```
+outputs/run/<run-name>/results/
+├── E7_global_normalization_stats.json
+├── metrics.json
+├── metrics.csv
+├── training_curve_loss.png
+├── training_curve_f1.png
+└── training_curve_iou.png
+```
+
+Run a quick CPU check with:
+
+```bash
+python src/pipeline/train.py \
+  root_dir=/absolute/path/to/Sen12Landslides \
+  trainer=cpu trainer.limit_train_batches=2 trainer.limit_val_batches=1 \
+  trainer.limit_test_batches=1 trainer.max_epochs=2
+```
+
+The lightweight reference-style classifier is configured separately with
+`configs/lightweight.yaml`. It uses two MobileNetV3-Small branches, ImageNet
+initialization through torchvision, patch-level labels from S12LS-AD masks, and
+training-only global normalization. Start it with
+`scripts/run_lightweight_when_gpu_free.sh`; the runner waits for both a
+CUDA-enabled PyTorch installation and an idle GPU, and appends status to
+`logs/E7_lightweight_gpu_wait.log`.
+
+For patch-level multimodal **landslide detection**, `scripts/run_e8_s1_s2_weather.sh`
+downloads complete NASA POWER weather coverage for the aligned S1/S2 release,
+builds strictly pre-event weather features, and trains a compact S1/S2/weather
+fusion model. The two S1 orbits share one MobileNetV3-Small encoder. Timestamped
+logs include progress and ETA; run artifacts and test metrics are written below
+`outputs/lightweight/`, with the experiment report in
+`reports/e8_multimodal_landslide_detection.md`. The official random patch splits
+share inventories across train/validation/test, so they do not measure
+generalization to unseen events.
+
+The controlled S2 / S1+S2 / S1+S2+weather comparison uses
+`scripts/run_e9_ablation_suite.sh`. Its weather arm learns from the ordered
+30-day pre-event POWER sequence with a small GRU, temporal attention, and
+gated cross-modal fusion; all arms use the same aligned splits and seed.
+
 Update the path of `root_dir` in the global configuration file (`Sen12Landslides/configs/config.yaml`) to point to your Sen12Landslides folder, ensuring that it contains the aforementioned data. 
 
 ## Dataset Overview

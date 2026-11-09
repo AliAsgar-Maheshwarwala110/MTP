@@ -8,8 +8,14 @@ isort
 lightning
 matplotlib
 netCDF4
+pandas
+numpy
+pyproj
+PyYAML
+requests
 rioxarray
 torchinfo
 wandb
 huggingface_hub
 torchvision
+xarray

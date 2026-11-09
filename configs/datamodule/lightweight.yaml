@@ -1,0 +1,13 @@
+_target_: src.data.lightweight_dataset.LightweightClassificationDataModule
+root_dir: ${root_dir}
+dataset_cfg: ${dataset}
+batch_size: 32
+num_workers: 4
+prefetch_factor: 2
+persistent_workers: true
+optical_channels: 4
+global_stats_max_samples: 256
+pin_memory: true
+train_transform: null
+val_transform: null
+test_transform: null

@@ -1,0 +1,74 @@
+[2026-11-08T15:43:10+05:30] E8 patch-level landslide detection pipeline started.
+[2026-11-08T15:43:10+05:30] GPU: 0; log: /home/b23241/Sen12Landslides/logs/E8_s1_s2_weather_20261108_101310.log
+[2026-11-08T15:43:10+05:30] POWER and epoch progress logs include measured ETA.
+2026-11-08 15:43:23,908 INFO POWER groups 25/322; samples 699/6549; elapsed 0.2 min; ETA 2.1 min
+2026-11-08 15:43:32,379 INFO POWER groups 50/322; samples 1255/6549; elapsed 0.3 min; ETA 1.7 min
+2026-11-08 15:43:40,356 INFO POWER groups 75/322; samples 1780/6549; elapsed 0.5 min; ETA 1.5 min
+2026-11-08 15:43:44,359 INFO POWER groups 100/322; samples 2043/6549; elapsed 0.5 min; ETA 1.2 min
+2026-11-08 15:43:50,681 INFO POWER groups 125/322; samples 2458/6549; elapsed 0.6 min; ETA 1.0 min
+2026-11-08 15:43:57,277 INFO POWER groups 150/322; samples 2892/6549; elapsed 0.7 min; ETA 0.8 min
+2026-11-08 15:44:06,876 INFO POWER groups 175/322; samples 3527/6549; elapsed 0.9 min; ETA 0.8 min
+2026-11-08 15:44:16,840 INFO POWER groups 200/322; samples 4187/6549; elapsed 1.1 min; ETA 0.6 min
+2026-11-08 15:44:28,202 INFO POWER groups 225/322; samples 4936/6549; elapsed 1.3 min; ETA 0.5 min
+2026-11-08 15:44:38,484 INFO POWER groups 250/322; samples 5612/6549; elapsed 1.4 min; ETA 0.4 min
+2026-11-08 15:44:47,146 INFO POWER groups 275/322; samples 6180/6549; elapsed 1.6 min; ETA 0.3 min
+2026-11-08 15:44:51,955 INFO POWER groups 300/322; samples 6492/6549; elapsed 1.6 min; ETA 0.1 min
+2026-11-08 15:44:52,840 INFO POWER groups 322/322; samples 6549/6549; elapsed 1.7 min; ETA 0.0 min
+Seed set to 42
+2026-11-08 15:46:37 INFO Using NVIDIA GeForce GTX 1080 Ti (cuda)
+2026-11-08 15:49:16 INFO Model parameters: 1,930,497; aligned samples: {'train': 4191, 'val': 1047, 'test': 1311}; weather features: 27
+2026-11-08 15:49:16 INFO Training labels: 1740 positive / 2451 negative
+2026-11-08 15:54:52 INFO epoch 1/15 batch 50/131 elapsed 5.6 min ETA 9.1 min
+2026-11-08 16:00:16 INFO epoch 1/15 batch 100/131 elapsed 11.0 min ETA 3.4 min
+2026-11-08 16:06:35 INFO epoch 1/15 train loss 0.5091 F1 0.6944 AUC 0.8256; val loss 0.7257 F1 0.0571 AUC 0.6869; epoch 17.3 min; training elapsed 17.3 min ETA 242.4 min
+2026-11-08 16:06:37 INFO Saved new best checkpoint: /users/home/b23241/Sen12Landslides/outputs/lightweight/E8_s1_s2_weather_20261108_101310/best_checkpoint.pt
+2026-11-08 16:09:54 INFO epoch 2/15 batch 50/131 elapsed 3.3 min ETA 5.3 min
+2026-11-08 16:13:21 INFO epoch 2/15 batch 100/131 elapsed 6.7 min ETA 2.1 min
+2026-11-08 16:18:05 INFO epoch 2/15 train loss 0.3810 F1 0.7798 AUC 0.9051; val loss 0.4105 F1 0.7527 AUC 0.8977; epoch 11.5 min; training elapsed 28.8 min ETA 187.2 min
+2026-11-08 16:18:06 INFO Saved new best checkpoint: /users/home/b23241/Sen12Landslides/outputs/lightweight/E8_s1_s2_weather_20261108_101310/best_checkpoint.pt
+2026-11-08 16:21:07 INFO epoch 3/15 batch 50/131 elapsed 3.0 min ETA 4.9 min
+2026-11-08 16:24:04 INFO epoch 3/15 batch 100/131 elapsed 6.0 min ETA 1.9 min
+2026-11-08 16:28:48 INFO epoch 3/15 train loss 0.3126 F1 0.8294 AUC 0.9381; val loss 0.4151 F1 0.7440 AUC 0.9099; epoch 10.7 min; training elapsed 39.5 min ETA 158.1 min
+2026-11-08 16:31:44 INFO epoch 4/15 batch 50/131 elapsed 2.9 min ETA 4.8 min
+2026-11-08 16:34:32 INFO epoch 4/15 batch 100/131 elapsed 5.7 min ETA 1.8 min
+2026-11-08 16:38:27 INFO epoch 4/15 train loss 0.2199 F1 0.8868 AUC 0.9708; val loss 0.4189 F1 0.7986 AUC 0.9116; epoch 9.6 min; training elapsed 49.2 min ETA 135.2 min
+2026-11-08 16:38:28 INFO Saved new best checkpoint: /users/home/b23241/Sen12Landslides/outputs/lightweight/E8_s1_s2_weather_20261108_101310/best_checkpoint.pt
+2026-11-08 16:41:18 INFO epoch 5/15 batch 50/131 elapsed 2.8 min ETA 4.6 min
+2026-11-08 16:43:57 INFO epoch 5/15 batch 100/131 elapsed 5.5 min ETA 1.7 min
+2026-11-08 16:47:26 INFO epoch 5/15 train loss 0.1458 F1 0.9286 AUC 0.9878; val loss 0.4589 F1 0.8000 AUC 0.9140; epoch 9.0 min; training elapsed 58.2 min ETA 116.3 min
+2026-11-08 16:47:27 INFO Saved new best checkpoint: /users/home/b23241/Sen12Landslides/outputs/lightweight/E8_s1_s2_weather_20261108_101310/best_checkpoint.pt
+2026-11-08 16:50:23 INFO epoch 6/15 batch 50/131 elapsed 2.9 min ETA 4.8 min
+2026-11-08 16:52:56 INFO epoch 6/15 batch 100/131 elapsed 5.5 min ETA 1.7 min
+2026-11-08 16:56:42 INFO epoch 6/15 train loss 0.0823 F1 0.9679 AUC 0.9963; val loss 0.5871 F1 0.7869 AUC 0.9050; epoch 9.3 min; training elapsed 67.4 min ETA 101.1 min
+2026-11-08 16:59:27 INFO epoch 7/15 batch 50/131 elapsed 2.8 min ETA 4.5 min
+2026-11-08 17:02:10 INFO epoch 7/15 batch 100/131 elapsed 5.5 min ETA 1.7 min
+2026-11-08 17:05:31 INFO epoch 7/15 train loss 0.0720 F1 0.9672 AUC 0.9967; val loss 0.6053 F1 0.7856 AUC 0.9011; epoch 8.8 min; training elapsed 76.2 min ETA 87.1 min
+2026-11-08 17:08:34 INFO epoch 8/15 batch 50/131 elapsed 3.0 min ETA 4.9 min
+2026-11-08 17:10:52 INFO epoch 8/15 batch 100/131 elapsed 5.3 min ETA 1.7 min
+2026-11-08 17:13:58 INFO epoch 8/15 train loss 0.0493 F1 0.9776 AUC 0.9986; val loss 0.6798 F1 0.7635 AUC 0.9003; epoch 8.4 min; training elapsed 84.7 min ETA 74.1 min
+2026-11-08 17:16:21 INFO epoch 9/15 batch 50/131 elapsed 2.4 min ETA 3.9 min
+2026-11-08 17:18:54 INFO epoch 9/15 batch 100/131 elapsed 4.9 min ETA 1.5 min
+2026-11-08 17:21:53 INFO epoch 9/15 train loss 0.0473 F1 0.9818 AUC 0.9984; val loss 0.6324 F1 0.7932 AUC 0.9119; epoch 7.9 min; training elapsed 92.6 min ETA 61.7 min
+2026-11-08 17:24:16 INFO epoch 10/15 batch 50/131 elapsed 2.4 min ETA 3.9 min
+2026-11-08 17:26:48 INFO epoch 10/15 batch 100/131 elapsed 4.9 min ETA 1.5 min
+2026-11-08 17:29:48 INFO epoch 10/15 train loss 0.0454 F1 0.9802 AUC 0.9986; val loss 0.6447 F1 0.8125 AUC 0.9097; epoch 7.9 min; training elapsed 100.5 min ETA 50.3 min
+2026-11-08 17:29:49 INFO Saved new best checkpoint: /users/home/b23241/Sen12Landslides/outputs/lightweight/E8_s1_s2_weather_20261108_101310/best_checkpoint.pt
+2026-11-08 17:32:13 INFO epoch 11/15 batch 50/131 elapsed 2.4 min ETA 3.9 min
+2026-11-08 17:34:44 INFO epoch 11/15 batch 100/131 elapsed 4.9 min ETA 1.5 min
+2026-11-08 17:37:49 INFO epoch 11/15 train loss 0.0467 F1 0.9817 AUC 0.9984; val loss 0.6932 F1 0.7812 AUC 0.9108; epoch 8.0 min; training elapsed 108.5 min ETA 39.5 min
+2026-11-08 17:40:16 INFO epoch 12/15 batch 50/131 elapsed 2.5 min ETA 4.0 min
+2026-11-08 17:42:42 INFO epoch 12/15 batch 100/131 elapsed 4.9 min ETA 1.5 min
+2026-11-08 17:45:46 INFO epoch 12/15 train loss 0.0392 F1 0.9842 AUC 0.9988; val loss 0.6817 F1 0.7726 AUC 0.9083; epoch 7.9 min; training elapsed 116.5 min ETA 29.1 min
+2026-11-08 17:48:12 INFO epoch 13/15 batch 50/131 elapsed 2.4 min ETA 4.0 min
+2026-11-08 17:50:40 INFO epoch 13/15 batch 100/131 elapsed 4.9 min ETA 1.5 min
+2026-11-08 17:53:46 INFO epoch 13/15 train loss 0.0336 F1 0.9868 AUC 0.9991; val loss 0.6908 F1 0.8058 AUC 0.9140; epoch 8.0 min; training elapsed 124.5 min ETA 19.2 min
+2026-11-08 17:56:12 INFO epoch 14/15 batch 50/131 elapsed 2.4 min ETA 3.9 min
+2026-11-08 17:58:45 INFO epoch 14/15 batch 100/131 elapsed 5.0 min ETA 1.5 min
+2026-11-08 18:01:57 INFO epoch 14/15 train loss 0.0271 F1 0.9885 AUC 0.9995; val loss 0.7538 F1 0.7839 AUC 0.8945; epoch 8.2 min; training elapsed 132.7 min ETA 9.5 min
+2026-11-08 18:04:25 INFO epoch 15/15 batch 50/131 elapsed 2.5 min ETA 4.0 min
+2026-11-08 18:06:42 INFO epoch 15/15 batch 100/131 elapsed 4.8 min ETA 1.5 min
+2026-11-08 18:09:47 INFO epoch 15/15 train loss 0.0170 F1 0.9937 AUC 0.9999; val loss 0.7812 F1 0.8014 AUC 0.9131; epoch 7.8 min; training elapsed 140.5 min ETA 0.0 min
+2026-11-08 18:09:47 INFO Early stopping after 5 epochs without validation F1 improvement
+2026-11-08 18:13:21 INFO Final test metrics using best validation checkpoint: {'accuracy': 0.8054920434951782, 'f1': 0.7605633802816901, 'auc': 0.8824107050895691, 'loss': 0.8156541388263056}
+2026-11-08 18:13:21 INFO Run artifacts: /users/home/b23241/Sen12Landslides/outputs/lightweight/E8_s1_s2_weather_20261108_101310
+[2026-11-08T18:13:25+05:30] E8 completed successfully in 150m 15s.

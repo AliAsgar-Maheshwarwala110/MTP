@@ -1,0 +1,21 @@
+root_dir: .
+output_dir: environmental_data
+dataset:
+  task: S12LS-AD
+  version: harmonized
+  modality: s2
+  days_before: 30
+  limit: null
+sources:
+  nasa_power:
+    enabled: true
+  era5_land:
+    enabled: false
+  gpm_imerg:
+    enabled: false
+  chirps:
+    enabled: false
+http:
+  timeout_seconds: 60
+  retries: 3
+  rate_limit_seconds: 0.2

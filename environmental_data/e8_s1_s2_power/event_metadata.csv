@@ -1,0 +1,7 @@
+id,s1asc,s1dsc,s2,pixel_annotated,inventory,event_date,sample_id,split,latitude,longitude,event_id
+chimanimani_1000,s1asc/chimanimani_s1asc_1000.nc,s1dsc/chimanimani_s1dsc_1000.nc,s2/chimanimani_s2_1000.nc,0,chimanimani,2019-03-15,chimanimani_1000,train,-20.00314473172455,32.81491977981691,chimanimani
+hiroshima_1000,s1asc/hiroshima_s1asc_1000.nc,s1dsc/hiroshima_s1dsc_1000.nc,s2/hiroshima_s2_1000.nc,58,hiroshima,2018-06-28,hiroshima_1000,train,34.535486789835886,132.6690424970524,hiroshima
+hokkaido_1026,s1asc/hokkaido_s1asc_1026.nc,s1dsc/hokkaido_s1dsc_1026.nc,s2/hokkaido_s2_1026.nc,0,hokkaido,2018-09-06,hokkaido_1026,train,42.81150383972256,142.10962344258184,hokkaido
+italy_1001,s1asc/italy_s1asc_1001.nc,s1dsc/italy_s1dsc_1001.nc,s2/italy_s2_1001.nc,0,italy,2023-05-16,italy_1001,train,44.21862666156039,10.904868073024945,italy
+itogon_1015,s1asc/itogon_s1asc_1015.nc,s1dsc/itogon_s1dsc_1015.nc,s2/itogon_s2_1015.nc,0,itogon,2018-09-15,itogon_1015,train,16.28379560883743,120.79453128775552,itogon
+usa_puertorico_1004,s1asc/usa_puertorico_s1asc_1004.nc,s1dsc/usa_puertorico_s1dsc_1004.nc,s2/usa_puertorico_s2_1004.nc,0,usa,2020-01-07,usa_puertorico_1004,train,18.04135208205337,-66.78876304047,usa

@@ -40,6 +40,7 @@ def main(cfg):
     except Exception as e:
         traceback.print_exc()
         logging.error(f"Training crashed: {e}")
+        raise
     finally:
         wandb.finish()  
         torch.cuda.empty_cache()

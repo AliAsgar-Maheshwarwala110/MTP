@@ -1,0 +1,16 @@
+- _target_: lightning.pytorch.callbacks.ModelCheckpoint
+  dirpath: ${hydra:runtime.output_dir}/checkpoints
+  filename: "best-{epoch:02d}-{val/f1:.4f}"
+  monitor: "val/f1"
+  save_top_k: 1
+  mode: "max"
+  save_last: true
+
+- _target_: lightning.pytorch.callbacks.EarlyStopping
+  monitor: "val/f1"
+  patience: 8
+  mode: "max"
+  verbose: true
+
+- _target_: src.utils.result_callback.ResultArtifactCallback
+  output_dir: ${hydra:runtime.output_dir}/results

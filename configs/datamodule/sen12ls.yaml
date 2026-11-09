@@ -13,16 +13,22 @@ train_transforms:
       p: 0.5
     - _target_: src.data.transforms.RandomRotate90
       p: 0.5
-    - _target_: src.data.transforms.Normalize
-      norm_json: ${root_dir}/tasks/${dataset.task}/${dataset.version}/${dataset.modality}/norm.json
+    - _target_: src.data.transforms.GlobalNormalize
+      stats_json: ${hydra:runtime.output_dir}/results/E7_global_normalization_stats.json
+      clip: 5.0
 val_transforms: 
   _target_: torchvision.transforms.Compose 
   transforms:
-    - _target_: src.data.transforms.Normalize
-      norm_json: ${root_dir}/tasks/${dataset.task}/${dataset.version}/${dataset.modality}/norm.json
+    - _target_: src.data.transforms.GlobalNormalize
+      stats_json: ${hydra:runtime.output_dir}/results/E7_global_normalization_stats.json
+      clip: 5.0
 test_transforms:
   _target_: torchvision.transforms.Compose 
   transforms:
-    - _target_: src.data.transforms.Normalize
-      norm_json: ${root_dir}/tasks/${dataset.task}/${dataset.version}/${dataset.modality}/norm.json
+  - _target_: src.data.transforms.GlobalNormalize
+    stats_json: ${hydra:runtime.output_dir}/results/E7_global_normalization_stats.json
+    clip: 5.0
 pin_memory: true
+normalization: global
+global_stats_path: ${hydra:runtime.output_dir}/results/E7_global_normalization_stats.json
+global_clip: 5.0

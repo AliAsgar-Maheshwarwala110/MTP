@@ -1,0 +1,11 @@
+name: sen12ls_ad_s2
+version: harmonized
+task: S12LS-AD
+modality: s2
+timeseries_len: 15
+img_size: 128
+num_classes: 1
+num_channels: 11
+dem: true
+min_date: "2015-12-03"
+nodata_value: -9999.0

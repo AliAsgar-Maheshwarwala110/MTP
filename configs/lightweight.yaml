@@ -1,0 +1,39 @@
+defaults:
+  - _self_
+  - dataset: sen12ls_ad_s2
+  - datamodule: lightweight
+  - model: lightweight_multimodal
+  - lit_module: lightweight
+  - trainer: lightweight_gpu
+  - callbacks: lightweight
+
+exp_tag: E7_lightweight_mobilenet_global_norm
+root_dir: /home/b23241/Sen12Landslides
+seed: 42
+sanity_check: false
+
+hydra:
+  run:
+    dir: ${root_dir}/outputs/lightweight/${exp_tag}_seed${seed}_${now:%Y-%m-%d_%H-%M-%S}
+  job:
+    chdir: false
+
+trainer:
+  logger: false
+
+datamodule:
+  global_stats_path: ${root_dir}/outputs/lightweight/E7_global_normalization_stats.json
+  global_stats_max_samples: 256
+  global_clip: 5.0
+  train_transform:
+    _target_: src.data.transforms.GlobalNormalize
+    stats_json: ${root_dir}/outputs/lightweight/E7_global_normalization_stats.json
+    clip: 5.0
+  val_transform:
+    _target_: src.data.transforms.GlobalNormalize
+    stats_json: ${root_dir}/outputs/lightweight/E7_global_normalization_stats.json
+    clip: 5.0
+  test_transform:
+    _target_: src.data.transforms.GlobalNormalize
+    stats_json: ${root_dir}/outputs/lightweight/E7_global_normalization_stats.json
+    clip: 5.0

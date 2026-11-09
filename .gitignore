@@ -7,7 +7,7 @@ src/scripts/
 src/models/stamnet.py 
 
 # Ignore common large files and cache files
-*.log
+# *.log
 *.h5
 *.nc
 *.pkl

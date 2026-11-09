@@ -1,0 +1,4 @@
+source,sample_id,requested_start,requested_end,path,status,retrieved_at_utc
+nasa_power,chimanimani_1000,2019-02-13,2019-03-15,environmental_data/cache/power/b6ae14ed90269ef3750067aa.json,cached,2026-10-22T10:07:20.384669+00:00
+nasa_power,chimanimani_1002,2019-02-13,2019-03-15,environmental_data/cache/power/4133c0dcd55d11ac344fe73b.json,cached,2026-10-22T10:07:20.605294+00:00
+nasa_power,chimanimani_1003,2019-02-13,2019-03-15,environmental_data/cache/power/a43e4cf5795ecd166216b49e.json,cached,2026-10-22T10:07:20.822344+00:00

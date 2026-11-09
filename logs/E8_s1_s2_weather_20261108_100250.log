@@ -1,0 +1,21 @@
+[2026-11-08T15:32:50+05:30] E8 patch-level landslide detection pipeline started.
+[2026-11-08T15:32:50+05:30] GPU: 0; log: /home/b23241/Sen12Landslides/logs/E8_s1_s2_weather_20261108_100250.log
+[2026-11-08T15:32:50+05:30] POWER and epoch progress logs include measured ETA.
+scripts/run_e8_s1_s2_weather.sh: line 53: fg: no job control
+2026-11-08 15:33:32,358 INFO POWER groups 25/322; samples 699/6549; elapsed 0.6 min; ETA 7.6 min
+2026-11-08 15:34:09,163 INFO POWER groups 50/322; samples 1255/6549; elapsed 1.3 min; ETA 6.8 min
+2026-11-08 15:34:43,352 INFO POWER groups 75/322; samples 1780/6549; elapsed 1.8 min; ETA 6.0 min
+2026-11-08 15:35:14,170 INFO POWER groups 100/322; samples 2043/6549; elapsed 2.3 min; ETA 5.2 min
+2026-11-08 15:35:47,785 INFO POWER groups 125/322; samples 2458/6549; elapsed 2.9 min; ETA 4.6 min
+2026-11-08 15:36:22,646 INFO POWER groups 150/322; samples 2892/6549; elapsed 3.5 min; ETA 4.0 min
+2026-11-08 15:36:58,639 INFO POWER groups 175/322; samples 3527/6549; elapsed 4.1 min; ETA 3.4 min
+2026-11-08 15:37:36,900 INFO POWER groups 200/322; samples 4187/6549; elapsed 4.7 min; ETA 2.9 min
+2026-11-08 15:38:16,714 INFO POWER groups 225/322; samples 4936/6549; elapsed 5.4 min; ETA 2.3 min
+2026-11-08 15:38:54,461 INFO POWER groups 250/322; samples 5612/6549; elapsed 6.0 min; ETA 1.7 min
+2026-11-08 15:39:30,294 INFO POWER groups 275/322; samples 6180/6549; elapsed 6.6 min; ETA 1.1 min
+2026-11-08 15:40:04,606 INFO POWER groups 300/322; samples 6492/6549; elapsed 7.2 min; ETA 0.5 min
+2026-11-08 15:40:30,389 INFO POWER groups 322/322; samples 6549/6549; elapsed 7.6 min; ETA 0.0 min
+scripts/run_e8_s1_s2_weather.sh: line 62: unexpected EOF while looking for matching `"'
+[2026-11-08T15:40:38+05:30] E8 failed with status 2 after 7m 48s.
+scripts/run_e8_s1_s2_weather.sh: line 38: fg: no job control
+scripts/run_e8_s1_s2_weather.sh: line 38: printf: /home/b23241/Sen12Landslides/logs/E8_s1_s2_weather_20261108_100250.log: invalid number

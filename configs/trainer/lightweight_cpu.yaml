@@ -1,0 +1,10 @@
+_target_: lightning.pytorch.trainer.Trainer
+default_root_dir: ${hydra:runtime.output_dir}
+max_epochs: 15
+accelerator: cpu
+devices: 1
+precision: 32
+logger: false
+callbacks: ${callbacks}
+num_sanity_val_steps: 0
+log_every_n_steps: 1
